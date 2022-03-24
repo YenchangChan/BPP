@@ -26,6 +26,13 @@ Usage: BP_PPT.py -b -p -i -r -h
 
 #### Example:
 - BP_PPT.py -b demo/pwmBP_human.txt -p demo/scPPT_human.txt -i demo/example.fa 
+```bash
+# on windows
+python BP_PPT.py -b demo/pwmBP_human.txt -p demo/scPPT_human.txt -i demo/example.fa
+# on Linux 
+python3 BP_PPT.py -b demo/pwmBP_human.txt -p demo/scPPT_human.txt -i demo/example.fa
+```
+
 
 #### Format of the output file:
 - `id:      ID of the intron`

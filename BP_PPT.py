@@ -1,7 +1,4 @@
 #!/usr/bin/python
-
-
-
 import sys,getopt,math
 
 
@@ -41,7 +38,7 @@ def bppt_bpscore(cbps):
         if i in PWMBP:
             cbpsc = cbpsc*PWMBP[i][cbpsN[i]]
         else:
-            print "Error: the input bps is longer than the PWM"
+            print ("Error: the input bps is longer than the PWM")
     return(cbpsc)
 
 def bppt_get_bpscore(l,basebp):
@@ -197,17 +194,17 @@ def bppt_print(idd,orinp,zbps,zppt,zsc,REPORTN):
         if end > len(orinp):
             end = len(orinp)
 
-    print "#id\tbps\tbp_pos\tsc_bps\tsc_ppt\tsc\tzsc_bps\tzsc_ppt\tzsc"
+    print ("#id\tbps\tbp_pos\tsc_bps\tsc_ppt\tsc\tzsc_bps\tzsc_ppt\tzsc")
     for i in range(0,end):
-        print idd+"\t"+orinp[i]+"\t"+str(zbps[i])+"\t"+str(zppt[i])+"\t"+str(zsc[i])
+        print (idd+"\t"+orinp[i]+"\t"+str(zbps[i])+"\t"+str(zppt[i])+"\t"+str(zsc[i]))
 
 def bppt_print_help():
-    print 'Usage: BP_PPT.py -b -p -i -r -h'
-    print ' -b, --pwm file    STR     The file including PWM of BPS'
-    print ' -p, --ppt file    STR     The file including the PPT score'
-    print ' -i, --FASTA file  STR     The file including the fasta sequence'
-    print ' -r, --report nu   INT     The reported sites; default=1; 0: print all positions'
-    print ' -h, --help'   
+    print ('Usage: BP_PPT.py -b -p -i -r -h')
+    print (' -b, --pwm file    STR     The file including PWM of BPS')
+    print (' -p, --ppt file    STR     The file including the PPT score')
+    print (' -i, --FASTA file  STR     The file including the fasta sequence')
+    print (' -r, --report nu   INT     The reported sites; default=1; 0: print all positions')
+    print (' -h, --help')   
     sys.exit()
 
 def bppt_get_options(argv):
